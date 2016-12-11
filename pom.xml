@@ -5,6 +5,10 @@
 	<artifactId>issue-investigation</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
 	<build>
 		<plugins>
 			<plugin>
@@ -16,29 +20,6 @@
 					<target>1.8</target>
 				</configuration>
 			</plugin>
-
-			<!-- <plugin> -->
-			<!-- <groupId>net.masterthought</groupId> -->
-			<!-- <artifactId>maven-cucumber-reporting</artifactId> -->
-			<!-- <version>3.3.0</version> -->
-			<!-- <executions> -->
-			<!-- <execution> -->
-			<!-- <id>execution</id> -->
-			<!-- <phase>test</phase> -->
-			<!-- <goals> -->
-			<!-- <goal>generate</goal> -->
-			<!-- </goals> -->
-			<!-- <configuration> -->
-			<!-- <projectName>cucumber-jvm-example</projectName> -->
-			<!-- <outputDirectory>${project.build.directory}</outputDirectory> -->
-			<!-- <cucumberOutput>${project.build.directory}/cucumber.json</cucumberOutput> -->
-			<!-- <skippedFails>false</skippedFails> -->
-			<!-- <enableFlashCharts>false</enableFlashCharts> -->
-			<!-- </configuration> -->
-			<!-- </execution> -->
-			<!-- </executions> -->
-			<!-- </plugin> -->
-
 		</plugins>
 	</build>
 
