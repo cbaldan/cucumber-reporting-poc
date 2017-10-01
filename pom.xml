@@ -2,8 +2,8 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>cucumber-reporting</groupId>
-	<artifactId>issue-investigation</artifactId>
+	<groupId>cbaldan</groupId>
+	<artifactId>cucumber-reporting-investigation</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 
 	<properties>
@@ -13,7 +13,7 @@
 
 	<profiles>
 		<profile>
-			<id>integration-tests</id>
+			<id>run-integration-tests</id>
 
 			<!-- Here the profile is activated by default so that the example can 
 				be executed directly, but it probably would not be in “real life.” -->
@@ -24,11 +24,6 @@
 			<build>
 
 				<plugins>
-					<plugin>
-						<groupId>org.codehaus.mojo</groupId>
-						<artifactId>versions-maven-plugin</artifactId>
-						<version>2.2</version>
-					</plugin>
 
 					<plugin>
 						<!-- skips unit tests execution -->
@@ -50,10 +45,8 @@
 							</execution>
 						</executions>
 						<configuration>
-							<systemPropertyVariables>
-								<cucumber.options>${cucumber.options}</cucumber.options>
-							</systemPropertyVariables>
 							<includes>
+								<!-- Tests had to be explicitly added to be run -->
 								<include>**/*Test.java</include>
 							</includes>
 						</configuration>
@@ -71,11 +64,9 @@
 									<goal>generate</goal>
 								</goals>
 								<configuration>
-									<projectName>cucumber-jvm-example</projectName>
+									<projectName>cucumber-reporting-investigation</projectName>
 									<outputDirectory>${project.build.directory}</outputDirectory>
 									<cucumberOutput>${project.build.directory}/cucumber.json</cucumberOutput>
-									<skippedFails>false</skippedFails>
-									<enableFlashCharts>false</enableFlashCharts>
 								</configuration>
 							</execution>
 						</executions>
@@ -95,11 +86,6 @@
 					<artifactId>cucumber-junit</artifactId>
 					<version>1.2.4</version>
 					<scope>test</scope>
-				</dependency>
-				<dependency>
-					<groupId>net.masterthought</groupId>
-					<artifactId>cucumber-reporting</artifactId>
-					<version>3.3.0</version>
 				</dependency>
 			</dependencies>
 
