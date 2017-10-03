@@ -11,6 +11,28 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 	</properties>
 
+	<dependencies>
+		<dependency>
+			<groupId>info.cukes</groupId>
+			<artifactId>cucumber-java</artifactId>
+			<version>1.2.4</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>info.cukes</groupId>
+			<artifactId>cucumber-junit</artifactId>
+			<version>1.2.4</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>net.masterthought</groupId>
+			<artifactId>maven-cucumber-reporting</artifactId>
+			<version>3.3.0</version>
+		</dependency>
+
+	</dependencies>
+
 	<profiles>
 		<profile>
 			<id>run-integration-tests</id>
@@ -73,21 +95,6 @@
 					</plugin>
 				</plugins>
 			</build>
-
-			<dependencies>
-				<dependency>
-					<groupId>info.cukes</groupId>
-					<artifactId>cucumber-java</artifactId>
-					<version>1.2.4</version>
-					<scope>test</scope>
-				</dependency>
-				<dependency>
-					<groupId>info.cukes</groupId>
-					<artifactId>cucumber-junit</artifactId>
-					<version>1.2.4</version>
-					<scope>test</scope>
-				</dependency>
-			</dependencies>
 
 		</profile>
 	</profiles>
